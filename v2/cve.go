@@ -79,7 +79,6 @@ type (
 		Weaknesses            []Weakness      `json:"weaknesses,omitempty"`
 		Configurations        []Config        `json:"configurations,omitempty"`
 		VendorComments        []VendorComment `json:"vendorComments,omitempty"`
-		SSVCV203              *SSVCV203       `json:"ssvcV203,omitempty"`
 	}
 
 	LangString struct {
@@ -98,6 +97,7 @@ type (
 		CVSSMetricV31 []CVSSMetricV31 `json:"cvssMetricV31,omitempty"`
 		CVSSMetricV30 []CVSSMetricV30 `json:"cvssMetricV30,omitempty"`
 		CVSSMetricV2  []CVSSMetricV2  `json:"cvssMetricV2,omitempty"`
+		SSVCV203      *SSVCV203       `json:"ssvcV203,omitempty"`
 	}
 
 	CVSSMetricV2 struct {
