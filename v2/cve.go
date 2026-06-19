@@ -79,6 +79,7 @@ type (
 		Weaknesses            []Weakness      `json:"weaknesses,omitempty"`
 		Configurations        []Config        `json:"configurations,omitempty"`
 		VendorComments        []VendorComment `json:"vendorComments,omitempty"`
+		SSVCV203              *SSVCV203       `json:"ssvcV203,omitempty"`
 	}
 
 	LangString struct {
@@ -299,6 +300,19 @@ type (
 		ThreatSeverity                    *string  `json:"threatSeverity,omitempty"`
 		EnvironmentalScore                *float64 `json:"environmentalScore,omitempty"`
 		EnvironmentalSeverity             *string  `json:"environmentalSeverity,omitempty"`
+	}
+
+	SSVCV203 struct {
+		Source   *string      `json:"source,omitempty"`
+		SSVCData SSVCV203Data `json:"ssvcData,omitempty"`
+	}
+
+	SSVCV203Data struct {
+		Timestamp *string             `json:"timestamp,omitempty"`
+		ID        *string             `json:"id,omitempty"`
+		Options   []map[string]string `json:"options"`
+		Role      string              `json:"role"`
+		Version   string              `json:"version"`
 	}
 
 	TypeEnum     string
